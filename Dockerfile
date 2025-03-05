@@ -10,6 +10,7 @@ ARG GHORG_VERSION=1.11.0
 ARG PHP_VERSION=8.3.2
 ARG COMPOSER_VERSION=2.7.4
 ARG HELM_VERSION=3.17.0
+ARG TALOSCTL_VERSION=v1.9.4
 
 USER root
 
@@ -68,6 +69,8 @@ RUN chsh -s /usr/bin/zsh coder
 RUN curl -sfL https://direnv.net/install.sh | bash
 
 RUN wget https://github.com/argoproj/argo-cd/releases/download/${ARGOCD_CLI_VERSION}/argocd-linux-amd64 -O /usr/bin/argocd && chmod +x /usr/bin/argocd 
+
+RUN wget https://github.com/siderolabs/talos/releases/download/v1.9.4/talosctl-linux-amd64 -O /usr/bin/talosctl && chmod +x /usr/bin/talosctl
 
 USER coder
 

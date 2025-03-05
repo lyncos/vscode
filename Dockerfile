@@ -1,4 +1,4 @@
-FROM harbor.kb.ebox.ca/dockerhub/codercom/code-server:4.96.4-39
+FROM codercom/code-server:4.96.4-39
 
 ARG ARGOCD_CLI_VERSION=v2.14.2
 ARG DEVSPACE_VERSION=v6.3.14
